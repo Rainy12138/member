@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <title>个人主页</title>
+        <style>
+       .head{
+           background-color: white;
+           color: black;
+           font-size: 50px;
+           font-family:"Microsoft  STHeiti";
+           text-align: center;
+           position: relative;
+           top: 5px;
+           
+
+       }
+       ul{
+        list-style-type: none;
+        margin: 0;
+        width: 950px;
+        padding: 0;
+         background-color:gray;  
+       }
+       /*导航栏样式*/
+       li a{
+           font-size: 20px;
+        display: block;
+        text-decoration: none;
+           color: black;
+           text-align: center;
+           font-weight: 500;
+           font-family: "Microsoft ST";
+       }
+       li a:hover{
+           background-color: black;
+           color: white;
+           font-weight: 1000;
+           font-family: "Microsoft ST";
+           text-decoration: none;
+           display: block;
+       }
+       /*按钮样式*/
+       .button{
+           background-color:lightgray;
+           color: black;
+           padding: 20px;
+           font-size: 20px;
+           border:none;
+           cursor:pointer;
+           
+       }
+       /* 容器 <div> - 需要定位下拉内容 */
+       .dropdown{
+           position :relative;
+           display: inline-block;
+       }
+       /* 下拉内容 (默认隐藏) */
+       .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+       }
+       /* 下拉菜单的链接 */
+       .dropdown-content a {
+       color: black;
+       padding: 12px 16px;
+       text-decoration: none;
+       display: block;
+       }
+       /* 鼠标移上去后修改下拉菜单链接颜色 */
+       .dropdown-content a:hover {background-color: #f1f1f1}
+       /* 在鼠标移上去后显示下拉菜单 */
+       .dropdown:hover .dropdown-content {
+    display: block;
+}
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .button {
+    background-color:wheat;
+}
+.tooltip{
+    position:relative;
+    display: inline-block;
+    border: bottom 1px dotted black;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color:#fff;
+    text-align:center;
+    border: radius 6px;
+    padding: 5px 0;
+    /*位置*/
+    position:absolute;
+    z-index: 1;
+    top: -5px;
+    left:110%;
+    /*淡入*/
+    opacity: 0;
+    transition: opacity 1s;
+
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip .tooltiptext::after{
+    content: "";
+    position: absolute;
+    right:100%;
+    top:50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style:solid;
+    border-color:transparent  black transparent  transparent;
+}
+div.img{
+    margin:5px;
+    border:1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+div.img:hover{
+    border:1px solid #777;
+}
+div.img img{
+    width: auto;
+    height: auto;
+}
+/* 创建三个相等的列 */
+.column {
+  float: left;
+  width: 33.33%;
+}
+ 
+/* 列后清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+
+        </style>
+
+
+    </head>
+    <body>
+        
+        <h1 class="head">我的主页</h1>
+        <ul>
+            <li><a href="#home">主页</box></li>
+            <li><a href="#note">日志</box></li>
+            <li><a href="#help">帮助</box></li>
+            <li><a href="#support">支持</box></li>
+               
+        </ul>
+ <div class="dropdown">
+                <button class="button">菜单</button>
+                <div class="dropdown-content">
+                    <a href="#list1">菜单1</a>
+                    <a href="#list2">菜单2</a>
+                    <a href="#list3">菜单3</a>
+                    <a href="#list4">菜单4</a>
+                </div>
+            </div>
+                
+        </div>
+        <p></p>
+        <div class="tooltip">点这试试？
+            <span class="tooltiptext">提示</span>
+        </div>
+        <div class="img">
+           <a target="_blank" href="49059435_p0.jpg"></a>
+           <img src="49059435_p0.jpg" width="300" height="200">
+        </div>
+        <div class="row">
+  <div class="column">
+    <h2>第一列</h2>
+    <p>内容1</p>
+  </div>
+  
+  <div class="column">
+    <h2>第二列</h2>
+    <p>内容2</p>
+  
+  <div class="column">
+    <h2>第三列</h2>
+    <p>内容3</p>
+  </div>
+</div>
+    </body>
+</html>
